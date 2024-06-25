@@ -270,6 +270,9 @@ struct timespec {
 #endif
 /* end unph */
 
+typedef unsigned char u_char;
+typedef unsigned int u_int;
+
 			/* prototypes for our own library functions */
 int		 connect_nonb(int, const SA *, socklen_t, int);
 int		 connect_timeo(int, const SA *, socklen_t, int);

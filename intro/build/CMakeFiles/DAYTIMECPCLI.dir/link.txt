@@ -1,1 +1,0 @@
-/usr/bin/cc -g -rdynamic CMakeFiles/DAYTIMECPCLI.dir/home/firefly/Codes/C/UNP/lib/error.c.o CMakeFiles/DAYTIMECPCLI.dir/src/daytimetcpcli.c.o -o ../bin/DAYTIMECPCLI 
