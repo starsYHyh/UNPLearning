@@ -19,7 +19,19 @@ int main(int argc, char *argv[])
 
     // if (connect(sockfd, (SA *)&servaddr, sizeof(servaddr)) < 0) 
     //     err_sys("connect error");
+    
     Connect(sockfd, (SA *)&servaddr, sizeof(servaddr));
+
+    // getsockname()函数的使用
+    struct sockaddr_in addr;
+    socklen_t len;
+    getsockname(sockfd, (SA *)&addr, &len);
+    char ipstr[INET_ADDRSTRLEN];
+    printf("%s\n", sock_ntop((SA*)&addr, len));
+    // inet_ntop(AF_INET, &addr.sin_addr, ipstr, len);
+    // printf("local ip: %s\nlocal port: %d\n", ipstr, ntohs(addr.sin_port));
+
+
 
     int count = 0;
     while ((n = read(sockfd, recvline, MAXLINE)) > 0)
