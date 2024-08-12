@@ -1,0 +1,3 @@
+/home/firefly/Codes/C/UNP/tcpcliserv/build/CMakeFiles/TCPCLI01.dir
+/home/firefly/Codes/C/UNP/tcpcliserv/build/CMakeFiles/edit_cache.dir
+/home/firefly/Codes/C/UNP/tcpcliserv/build/CMakeFiles/rebuild_cache.dir
