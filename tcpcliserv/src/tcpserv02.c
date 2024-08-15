@@ -1,14 +1,13 @@
 #include "unp.h"
 #include "sigchldwait.h"
 
-// TCP回射服务器程序
+// TCP回射服务器程序，为了处理僵死进程，增加信号处理函数
 int main(int argc, char *argv[])
 {
     int listenfd, connfd;
     pid_t childpid;
     socklen_t clilen;
     struct sockaddr_in cliaddr, servaddr;
-    void sig_chld(int);
 
     listenfd = Socket(AF_INET, SOCK_STREAM, 0);
     bzero(&servaddr, sizeof(servaddr));
@@ -18,7 +17,6 @@ int main(int argc, char *argv[])
     Bind(listenfd, (SA *)&servaddr, sizeof(servaddr));
     Listen(listenfd, LISTENQ);
 
-    // 5.9 为了处理僵死进程，增加信号处理函数
     Signal(SIGCHLD, sig_chld);
 
     for (;;)

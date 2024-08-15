@@ -36,12 +36,12 @@ link_libraries(crypt pthread)
 add_compile_options(-g -O2 -Wall)  # 启用所有警告、额外警告
 
 # 将可执行文件的名字存储在变量中
-set(EXE_NAME "TCPCLI01")
+set(EXE_NAME "TCPSERV03")
 
 add_executable(${EXE_NAME}
     ${LIBSRC}
     ${LOCLIBSRC}
-    ${SRC_DIR}/tcpcli01.c
+    ${SRC_DIR}/tcpserv03.c
 )
 
 add_definitions(-D_REENTRANT)
