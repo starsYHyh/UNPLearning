@@ -2,7 +2,7 @@ CMakeFiles/TCPSERV08.dir/src/tcpserv08.c.o: \
  /home/firefly/Codes/C/UNP/tcpcliserv/src/tcpserv08.c \
  /usr/include/stdc-predef.h \
  /home/firefly/Codes/C/UNP/tcpcliserv/../mylib/unp.h \
- /home/firefly/Codes/C/UNP/tcpcliserv/../mylib/../config.h \
+ /home/firefly/Codes/C/UNP/tcpcliserv/../mylib/config.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

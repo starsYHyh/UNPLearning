@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TCPSERV04
+# Target rules for targets named TCPSERV08
 
 # Build rule for target.
-TCPSERV04: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TCPSERV04
-.PHONY : TCPSERV04
+TCPSERV08: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TCPSERV08
+.PHONY : TCPSERV08
 
 # fast build rule for target.
-TCPSERV04/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/build
-.PHONY : TCPSERV04/fast
+TCPSERV08/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/build
+.PHONY : TCPSERV08/fast
 
 lib/sigchldwait.o: lib/sigchldwait.c.o
 .PHONY : lib/sigchldwait.o
 
 # target to build an object file
 lib/sigchldwait.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/lib/sigchldwait.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/lib/sigchldwait.c.o
 .PHONY : lib/sigchldwait.c.o
 
 lib/sigchldwait.i: lib/sigchldwait.c.i
@@ -142,7 +142,7 @@ lib/sigchldwait.i: lib/sigchldwait.c.i
 
 # target to preprocess a source file
 lib/sigchldwait.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/lib/sigchldwait.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/lib/sigchldwait.c.i
 .PHONY : lib/sigchldwait.c.i
 
 lib/sigchldwait.s: lib/sigchldwait.c.s
@@ -150,32 +150,32 @@ lib/sigchldwait.s: lib/sigchldwait.c.s
 
 # target to generate assembly for a file
 lib/sigchldwait.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/lib/sigchldwait.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/lib/sigchldwait.c.s
 .PHONY : lib/sigchldwait.c.s
 
-src/tcpserv04.o: src/tcpserv04.c.o
-.PHONY : src/tcpserv04.o
+src/tcpserv08.o: src/tcpserv08.c.o
+.PHONY : src/tcpserv08.o
 
 # target to build an object file
-src/tcpserv04.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/src/tcpserv04.c.o
-.PHONY : src/tcpserv04.c.o
+src/tcpserv08.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/src/tcpserv08.c.o
+.PHONY : src/tcpserv08.c.o
 
-src/tcpserv04.i: src/tcpserv04.c.i
-.PHONY : src/tcpserv04.i
+src/tcpserv08.i: src/tcpserv08.c.i
+.PHONY : src/tcpserv08.i
 
 # target to preprocess a source file
-src/tcpserv04.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/src/tcpserv04.c.i
-.PHONY : src/tcpserv04.c.i
+src/tcpserv08.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/src/tcpserv08.c.i
+.PHONY : src/tcpserv08.c.i
 
-src/tcpserv04.s: src/tcpserv04.c.s
-.PHONY : src/tcpserv04.s
+src/tcpserv08.s: src/tcpserv08.c.s
+.PHONY : src/tcpserv08.s
 
 # target to generate assembly for a file
-src/tcpserv04.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV04.dir/build.make CMakeFiles/TCPSERV04.dir/src/tcpserv04.c.s
-.PHONY : src/tcpserv04.c.s
+src/tcpserv08.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERV08.dir/build.make CMakeFiles/TCPSERV08.dir/src/tcpserv08.c.s
+.PHONY : src/tcpserv08.c.s
 
 # Help Target
 help:
@@ -185,13 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TCPSERV04"
+	@echo "... TCPSERV08"
 	@echo "... lib/sigchldwait.o"
 	@echo "... lib/sigchldwait.i"
 	@echo "... lib/sigchldwait.s"
-	@echo "... src/tcpserv04.o"
-	@echo "... src/tcpserv04.i"
-	@echo "... src/tcpserv04.s"
+	@echo "... src/tcpserv08.o"
+	@echo "... src/tcpserv08.i"
+	@echo "... src/tcpserv08.s"
 .PHONY : help
 
 
