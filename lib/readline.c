@@ -68,7 +68,7 @@ ssize_t
 Readline(int fd, void *ptr, size_t maxlen)
 {
 	ssize_t n;
-
+	// 如果输入一个回车，那么n等于1
 	if ((n = readline(fd, ptr, maxlen)) < 0)
 		err_sys("readline error");
 	return (n);

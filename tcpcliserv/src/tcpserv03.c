@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
             str_echo(connfd); 
             exit(0);
         }
+        printf("child %d created\n", childpid);
         Close(connfd); 
     }
 }
