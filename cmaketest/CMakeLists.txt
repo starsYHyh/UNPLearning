@@ -8,10 +8,10 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
 # 设置源文件目录变量
-set(LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
-set(LOCAL_LIB_DIR ${PROJECT_SOURCE_DIR}/../lib)
+set(LIB_DIR ${PROJECT_SOURCE_DIR}/../lib)
+set(LOCAL_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
-set(LIBUNP_NAME ${PROJECT_SOURCE_DIR}/../libunp.a)
+set(LIBUNP_NAME ${PROJECT_SOURCE_DIR}/../libunp.a) # 可以把这行注释掉以节省编译时间
 
 # 包含目录
 include_directories(
@@ -20,6 +20,7 @@ include_directories(
 )
 
 # 添加公共和私有源文件到变量
+# aux_source_directory(${MLIB_DIR} MLIBSRC)     # 公用
 aux_source_directory(${LIB_DIR} LIBSRC)     # 公用
 aux_source_directory(${LOCAL_LIB_DIR} LOCLIBSRC)   # 私有
 
@@ -27,21 +28,22 @@ aux_source_directory(${LOCAL_LIB_DIR} LOCLIBSRC)   # 私有
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)   # PROJECT_SOURCE_DIR为CMakeLists.txt所在的目录
 
 # 添加链接库
-link_libraries(crypt)
+link_libraries(crypt pthread)
+
+# 当需要链接到库 libunp.a 时使用这句
+# link_libraries(crypt pthread ${LIBUNP_NAME})
 
 # 添加编译选项
-add_compile_options(-g -O2 -Wall -Wextra)  # 启用所有警告、额外警告
+add_compile_options(-g -O2 -Wall)  # 启用所有警告、额外警告
 
 # 将可执行文件的名字存储在变量中
-set(EXE_NAME "TCPSERV01")
+set(EXE_NAME "TCPSERV08")
 
 add_executable(${EXE_NAME}
-${LIBSRC}
-${LOCLIBSRC}
-${SRC_DIR}/tcpserv01.c
+    ${LIBSRC}
+    ${LOCLIBSRC}
+    ${SRC_DIR}/tcpserv08.c
 )
-
-target_link_libraries(${EXE_NAME} ${LIBUNP_NAME} pthread)
 
 add_definitions(-D_REENTRANT)
 
