@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/TCPSERV01.dir/lib/sigchldwait.c.o CMakeFiles/TCPSERV01.dir/src/tcpserv01.c.o -o ../bin/TCPSERV01  -lcrypt -lpthread ../../mylib/libunp.a 

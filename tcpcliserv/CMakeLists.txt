@@ -30,14 +30,14 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)   # PROJECT_SOURCE_DIR为C
 link_libraries(crypt pthread ${LIBUNP_NAME})
 
 # 添加编译选项
-add_compile_options(-g -O2 -Wall)  # 启用所有警告、额外警告
+add_compile_options(-g -O2 -Wall -Wextra)  # 启用所有警告、额外警告
 
 # 将可执行文件的名字存储在变量中
-set(EXE_NAME "TCPSERV08")
+set(EXE_NAME "TCPSERV01")
 
 add_executable(${EXE_NAME}
     ${LOCLIBSRC}
-    ${SRC_DIR}/tcpserv08.c
+    ${SRC_DIR}/tcpserv01.c
 )
 
 add_definitions(-D_REENTRANT)
