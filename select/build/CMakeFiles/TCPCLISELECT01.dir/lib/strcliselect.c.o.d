@@ -1,6 +1,7 @@
-CMakeFiles/STRCLISELECT01.dir/src/strcliselect01.c.o: \
- /home/firefly/Codes/C/UNP/select/src/strcliselect01.c \
+CMakeFiles/TCPCLISELECT01.dir/lib/strcliselect.c.o: \
+ /home/firefly/Codes/C/UNP/select/lib/strcliselect.c \
  /usr/include/stdc-predef.h \
+ /home/firefly/Codes/C/UNP/select/lib/strcliselect.h \
  /home/firefly/Codes/C/UNP/select/../mylib/unp.h \
  /home/firefly/Codes/C/UNP/select/../mylib/config.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
@@ -143,5 +144,4 @@ CMakeFiles/STRCLISELECT01.dir/src/strcliselect01.c.o: \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /home/firefly/Codes/C/UNP/select/lib/strcliselect.h
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h

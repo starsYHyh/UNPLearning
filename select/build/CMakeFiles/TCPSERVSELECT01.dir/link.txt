@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.o CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.o -o ../bin/TCPSERVSELECT01  -lcrypt -lpthread ../../mylib/libunp.a 
