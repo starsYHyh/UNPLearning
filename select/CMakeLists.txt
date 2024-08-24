@@ -33,11 +33,11 @@ link_libraries(crypt pthread ${LIBUNP_NAME})
 add_compile_options(-g -O2 -Wall -Wextra)  # 启用所有警告、额外警告
 
 # 将可执行文件的名字存储在变量中
-set(EXE_NAME "TCPSERVSELECT01")
+set(EXE_NAME "TCPSERVPOLL01")
 
 add_executable(${EXE_NAME}
     ${LOCLIBSRC}
-    ${SRC_DIR}/tcpservselect01.c
+    ${SRC_DIR}/tcpservpoll01.c
 )
 
 add_definitions(-D_REENTRANT)

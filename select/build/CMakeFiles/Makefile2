@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/firefly/Codes/C/UNP/select/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TCPSERVSELECT01.dir/all
+all: CMakeFiles/TCPSERVPOLL01.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TCPSERVSELECT01.dir/clean
+clean: CMakeFiles/TCPSERVPOLL01.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TCPSERVSELECT01.dir
+# Target rules for target CMakeFiles/TCPSERVPOLL01.dir
 
 # All Build rule for target.
-CMakeFiles/TCPSERVSELECT01.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/firefly/Codes/C/UNP/select/build/CMakeFiles --progress-num=1,2,3 "Built target TCPSERVSELECT01"
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/all
+CMakeFiles/TCPSERVPOLL01.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/firefly/Codes/C/UNP/select/build/CMakeFiles --progress-num=1,2,3 "Built target TCPSERVPOLL01"
+.PHONY : CMakeFiles/TCPSERVPOLL01.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TCPSERVSELECT01.dir/rule: cmake_check_build_system
+CMakeFiles/TCPSERVPOLL01.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TCPSERVSELECT01.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TCPSERVPOLL01.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles 0
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/rule
+.PHONY : CMakeFiles/TCPSERVPOLL01.dir/rule
 
 # Convenience name for target.
-TCPSERVSELECT01: CMakeFiles/TCPSERVSELECT01.dir/rule
-.PHONY : TCPSERVSELECT01
+TCPSERVPOLL01: CMakeFiles/TCPSERVPOLL01.dir/rule
+.PHONY : TCPSERVPOLL01
 
 # clean rule for target.
-CMakeFiles/TCPSERVSELECT01.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/clean
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/clean
+CMakeFiles/TCPSERVPOLL01.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/clean
+.PHONY : CMakeFiles/TCPSERVPOLL01.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

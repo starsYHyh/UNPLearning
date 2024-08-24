@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TCPSERVSELECT01
+# Target rules for targets named TCPSERVPOLL01
 
 # Build rule for target.
-TCPSERVSELECT01: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TCPSERVSELECT01
-.PHONY : TCPSERVSELECT01
+TCPSERVPOLL01: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TCPSERVPOLL01
+.PHONY : TCPSERVPOLL01
 
 # fast build rule for target.
-TCPSERVSELECT01/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/build
-.PHONY : TCPSERVSELECT01/fast
+TCPSERVPOLL01/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/build
+.PHONY : TCPSERVPOLL01/fast
 
 lib/strcliselect.o: lib/strcliselect.c.o
 .PHONY : lib/strcliselect.o
 
 # target to build an object file
 lib/strcliselect.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/lib/strcliselect.c.o
 .PHONY : lib/strcliselect.c.o
 
 lib/strcliselect.i: lib/strcliselect.c.i
@@ -142,7 +142,7 @@ lib/strcliselect.i: lib/strcliselect.c.i
 
 # target to preprocess a source file
 lib/strcliselect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/lib/strcliselect.c.i
 .PHONY : lib/strcliselect.c.i
 
 lib/strcliselect.s: lib/strcliselect.c.s
@@ -150,32 +150,32 @@ lib/strcliselect.s: lib/strcliselect.c.s
 
 # target to generate assembly for a file
 lib/strcliselect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/lib/strcliselect.c.s
 .PHONY : lib/strcliselect.c.s
 
-src/tcpservselect01.o: src/tcpservselect01.c.o
-.PHONY : src/tcpservselect01.o
+src/tcpservpoll01.o: src/tcpservpoll01.c.o
+.PHONY : src/tcpservpoll01.o
 
 # target to build an object file
-src/tcpservselect01.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.o
-.PHONY : src/tcpservselect01.c.o
+src/tcpservpoll01.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/src/tcpservpoll01.c.o
+.PHONY : src/tcpservpoll01.c.o
 
-src/tcpservselect01.i: src/tcpservselect01.c.i
-.PHONY : src/tcpservselect01.i
+src/tcpservpoll01.i: src/tcpservpoll01.c.i
+.PHONY : src/tcpservpoll01.i
 
 # target to preprocess a source file
-src/tcpservselect01.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.i
-.PHONY : src/tcpservselect01.c.i
+src/tcpservpoll01.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/src/tcpservpoll01.c.i
+.PHONY : src/tcpservpoll01.c.i
 
-src/tcpservselect01.s: src/tcpservselect01.c.s
-.PHONY : src/tcpservselect01.s
+src/tcpservpoll01.s: src/tcpservpoll01.c.s
+.PHONY : src/tcpservpoll01.s
 
 # target to generate assembly for a file
-src/tcpservselect01.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.s
-.PHONY : src/tcpservselect01.c.s
+src/tcpservpoll01.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVPOLL01.dir/build.make CMakeFiles/TCPSERVPOLL01.dir/src/tcpservpoll01.c.s
+.PHONY : src/tcpservpoll01.c.s
 
 # Help Target
 help:
@@ -185,13 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TCPSERVSELECT01"
+	@echo "... TCPSERVPOLL01"
 	@echo "... lib/strcliselect.o"
 	@echo "... lib/strcliselect.i"
 	@echo "... lib/strcliselect.s"
-	@echo "... src/tcpservselect01.o"
-	@echo "... src/tcpservselect01.i"
-	@echo "... src/tcpservselect01.s"
+	@echo "... src/tcpservpoll01.o"
+	@echo "... src/tcpservpoll01.i"
+	@echo "... src/tcpservpoll01.s"
 .PHONY : help
 
 
