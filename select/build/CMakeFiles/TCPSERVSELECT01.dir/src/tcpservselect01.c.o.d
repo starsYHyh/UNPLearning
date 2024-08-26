@@ -143,4 +143,7 @@ CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.o: \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/netinet/tcp.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h

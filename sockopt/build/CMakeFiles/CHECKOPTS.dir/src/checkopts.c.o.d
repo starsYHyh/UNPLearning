@@ -1,8 +1,8 @@
-CMakeFiles/TCPCLISELECT01.dir/src/tcpcliselect01.c.o: \
- /home/firefly/Codes/C/UNP/select/src/tcpcliselect01.c \
+CMakeFiles/CHECKOPTS.dir/src/checkopts.c.o: \
+ /home/firefly/Codes/C/UNP/sockopt/src/checkopts.c \
  /usr/include/stdc-predef.h \
- /home/firefly/Codes/C/UNP/select/../mylib/unp.h \
- /home/firefly/Codes/C/UNP/select/../mylib/config.h \
+ /home/firefly/Codes/C/UNP/sockopt/../mylib/unp.h \
+ /home/firefly/Codes/C/UNP/sockopt/../mylib/config.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -144,7 +144,6 @@ CMakeFiles/TCPCLISELECT01.dir/src/tcpcliselect01.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /home/firefly/Codes/C/UNP/select/lib/strcliselect.h \
  /usr/include/netinet/tcp.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h

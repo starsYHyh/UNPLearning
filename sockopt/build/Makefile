@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/firefly/Codes/C/UNP/select
+CMAKE_SOURCE_DIR = /home/firefly/Codes/C/UNP/sockopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/firefly/Codes/C/UNP/select/build
+CMAKE_BINARY_DIR = /home/firefly/Codes/C/UNP/sockopt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles /home/firefly/Codes/C/UNP/select/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/sockopt/build/CMakeFiles /home/firefly/Codes/C/UNP/sockopt/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/sockopt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,65 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TCPSERVSELECT01
+# Target rules for targets named CHECKOPTS
 
 # Build rule for target.
-TCPSERVSELECT01: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TCPSERVSELECT01
-.PHONY : TCPSERVSELECT01
+CHECKOPTS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CHECKOPTS
+.PHONY : CHECKOPTS
 
 # fast build rule for target.
-TCPSERVSELECT01/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/build
-.PHONY : TCPSERVSELECT01/fast
+CHECKOPTS/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/build
+.PHONY : CHECKOPTS/fast
 
-lib/strcliselect.o: lib/strcliselect.c.o
-.PHONY : lib/strcliselect.o
-
-# target to build an object file
-lib/strcliselect.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.o
-.PHONY : lib/strcliselect.c.o
-
-lib/strcliselect.i: lib/strcliselect.c.i
-.PHONY : lib/strcliselect.i
-
-# target to preprocess a source file
-lib/strcliselect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.i
-.PHONY : lib/strcliselect.c.i
-
-lib/strcliselect.s: lib/strcliselect.c.s
-.PHONY : lib/strcliselect.s
-
-# target to generate assembly for a file
-lib/strcliselect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/lib/strcliselect.c.s
-.PHONY : lib/strcliselect.c.s
-
-src/tcpservselect01.o: src/tcpservselect01.c.o
-.PHONY : src/tcpservselect01.o
+src/checkopts.o: src/checkopts.c.o
+.PHONY : src/checkopts.o
 
 # target to build an object file
-src/tcpservselect01.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.o
-.PHONY : src/tcpservselect01.c.o
+src/checkopts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/src/checkopts.c.o
+.PHONY : src/checkopts.c.o
 
-src/tcpservselect01.i: src/tcpservselect01.c.i
-.PHONY : src/tcpservselect01.i
+src/checkopts.i: src/checkopts.c.i
+.PHONY : src/checkopts.i
 
 # target to preprocess a source file
-src/tcpservselect01.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.i
-.PHONY : src/tcpservselect01.c.i
+src/checkopts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/src/checkopts.c.i
+.PHONY : src/checkopts.c.i
 
-src/tcpservselect01.s: src/tcpservselect01.c.s
-.PHONY : src/tcpservselect01.s
+src/checkopts.s: src/checkopts.c.s
+.PHONY : src/checkopts.s
 
 # target to generate assembly for a file
-src/tcpservselect01.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/src/tcpservselect01.c.s
-.PHONY : src/tcpservselect01.c.s
+src/checkopts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/src/checkopts.c.s
+.PHONY : src/checkopts.c.s
 
 # Help Target
 help:
@@ -185,13 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TCPSERVSELECT01"
-	@echo "... lib/strcliselect.o"
-	@echo "... lib/strcliselect.i"
-	@echo "... lib/strcliselect.s"
-	@echo "... src/tcpservselect01.o"
-	@echo "... src/tcpservselect01.i"
-	@echo "... src/tcpservselect01.s"
+	@echo "... CHECKOPTS"
+	@echo "... src/checkopts.o"
+	@echo "... src/checkopts.i"
+	@echo "... src/checkopts.s"
 .PHONY : help
 
 

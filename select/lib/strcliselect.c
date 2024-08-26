@@ -51,7 +51,16 @@ void str_cli02(FILE *fp, int sockfd) {
                 else 
                     err_quit("str_cli: server terminated premuturely");
             }
-            printf("serv tranlate one line\n");
+            // 
+            /*
+                当客户向服务器一次发送多行地址时，每读取到一行，就立即向服务器发送一行。
+                当服务器接收数据时，每收到一行就向客户作出回应，
+                但是当客户端传输较多行文本时，
+                客户端接收到的serv transfer语句次数却并不总等于发送的cli transferred语句个数。
+                在UNP7.9.2节介绍的TCP_NODELAY也许可以解释
+                但是经过验证，尝试禁用Nagle算法之后，仍无法解决问题
+            */
+            printf("serv transfer:\n");
             Write(fileno(stdout), buf, n);
         }
 
@@ -68,7 +77,7 @@ void str_cli02(FILE *fp, int sockfd) {
             }
             Writen(sockfd, buf, n);
             // 由于网络速度的不确定性，可能cli还没传输完所有的行，就已经收到了来自服务器的回应
-            printf("cli translate one line\n");
+            printf("cli transferred.\n");
         }
     }
 }

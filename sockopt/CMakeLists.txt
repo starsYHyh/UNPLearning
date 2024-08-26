@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 
 # 项目名称和版本
-project(SELECT VERSION 1.0 LANGUAGES C)
+project(SOCKOPT VERSION 1.0 LANGUAGES C)
 
 # 设置C编译标准
 set(CMAKE_C_STANDARD 99)
@@ -33,11 +33,11 @@ link_libraries(crypt pthread ${LIBUNP_NAME})
 add_compile_options(-g -O2 -Wall -Wextra)  # 启用所有警告、额外警告
 
 # 将可执行文件的名字存储在变量中
-set(EXE_NAME "TCPSERVSELECT01")
+set(EXE_NAME "CHECKOPTS")
 
 add_executable(${EXE_NAME}
     ${LOCLIBSRC}
-    ${SRC_DIR}/tcpservselect01.c
+    ${SRC_DIR}/checkopts.c
 )
 
 add_definitions(-D_REENTRANT)

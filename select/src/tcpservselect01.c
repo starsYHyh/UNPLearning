@@ -1,4 +1,5 @@
 #include "unp.h"
+#include <netinet/tcp.h>
 
 int main(int argc, char *argv[]) {
     int i, maxi, maxfd, listenfd, connfd, sockfd;
@@ -8,6 +9,7 @@ int main(int argc, char *argv[]) {
     char buf[MAXLINE];
     socklen_t clilen;
     struct sockaddr_in cliaddr, servaddr;
+    int optval = 1;
 
     listenfd = Socket(AF_INET, SOCK_STREAM, 0);
 
@@ -15,6 +17,8 @@ int main(int argc, char *argv[]) {
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
     servaddr.sin_port = htons(SERV_PORT);
+
+    Setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
 
     Bind(listenfd, (SA*)&servaddr, sizeof(servaddr));
     Listen(listenfd, LISTENQ);
@@ -34,6 +38,7 @@ int main(int argc, char *argv[]) {
         if (FD_ISSET(listenfd, &rset)) {    // 如果监听套接字可以读
             clilen = sizeof(cliaddr);
             connfd = Accept(listenfd, (SA*)&cliaddr, &clilen);
+            Setsockopt(connfd, IPPROTO_TCP, TCP_NODELAY, &optval, sizeof(optval));
 
             for (i = 0; i < FD_SETSIZE; i++) 
                 if (client[i] < 0) {

@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/firefly/Codes/C/UNP/select
+CMAKE_SOURCE_DIR = /home/firefly/Codes/C/UNP/sockopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/firefly/Codes/C/UNP/select/build
+CMAKE_BINARY_DIR = /home/firefly/Codes/C/UNP/sockopt/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TCPSERVSELECT01.dir/all
+all: CMakeFiles/CHECKOPTS.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TCPSERVSELECT01.dir/clean
+clean: CMakeFiles/CHECKOPTS.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TCPSERVSELECT01.dir
+# Target rules for target CMakeFiles/CHECKOPTS.dir
 
 # All Build rule for target.
-CMakeFiles/TCPSERVSELECT01.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/firefly/Codes/C/UNP/select/build/CMakeFiles --progress-num=1,2,3 "Built target TCPSERVSELECT01"
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/all
+CMakeFiles/CHECKOPTS.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/firefly/Codes/C/UNP/sockopt/build/CMakeFiles --progress-num=1,2 "Built target CHECKOPTS"
+.PHONY : CMakeFiles/CHECKOPTS.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TCPSERVSELECT01.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TCPSERVSELECT01.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/select/build/CMakeFiles 0
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/rule
+CMakeFiles/CHECKOPTS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/sockopt/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CHECKOPTS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/firefly/Codes/C/UNP/sockopt/build/CMakeFiles 0
+.PHONY : CMakeFiles/CHECKOPTS.dir/rule
 
 # Convenience name for target.
-TCPSERVSELECT01: CMakeFiles/TCPSERVSELECT01.dir/rule
-.PHONY : TCPSERVSELECT01
+CHECKOPTS: CMakeFiles/CHECKOPTS.dir/rule
+.PHONY : CHECKOPTS
 
 # clean rule for target.
-CMakeFiles/TCPSERVSELECT01.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TCPSERVSELECT01.dir/build.make CMakeFiles/TCPSERVSELECT01.dir/clean
-.PHONY : CMakeFiles/TCPSERVSELECT01.dir/clean
+CMakeFiles/CHECKOPTS.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHECKOPTS.dir/build.make CMakeFiles/CHECKOPTS.dir/clean
+.PHONY : CMakeFiles/CHECKOPTS.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
