@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/UDPCLI01.dir/src/udpcli01.c.o -o ../bin/UDPCLI01  -lcrypt -lpthread ../../mylib/libunp.a 
