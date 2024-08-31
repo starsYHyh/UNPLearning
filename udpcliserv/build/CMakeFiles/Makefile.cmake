@@ -39,5 +39,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/UDPSERV02.dir/DependInfo.cmake"
+  "CMakeFiles/UDPSERVSELECT01.dir/DependInfo.cmake"
   )

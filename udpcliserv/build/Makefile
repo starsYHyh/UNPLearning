@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named UDPSERV02
+# Target rules for targets named UDPSERVSELECT01
 
 # Build rule for target.
-UDPSERV02: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UDPSERV02
-.PHONY : UDPSERV02
+UDPSERVSELECT01: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UDPSERVSELECT01
+.PHONY : UDPSERVSELECT01
 
 # fast build rule for target.
-UDPSERV02/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERV02.dir/build.make CMakeFiles/UDPSERV02.dir/build
-.PHONY : UDPSERV02/fast
+UDPSERVSELECT01/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERVSELECT01.dir/build.make CMakeFiles/UDPSERVSELECT01.dir/build
+.PHONY : UDPSERVSELECT01/fast
 
-src/udpserv02.o: src/udpserv02.c.o
-.PHONY : src/udpserv02.o
+src/udpservselect01.o: src/udpservselect01.c.o
+.PHONY : src/udpservselect01.o
 
 # target to build an object file
-src/udpserv02.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERV02.dir/build.make CMakeFiles/UDPSERV02.dir/src/udpserv02.c.o
-.PHONY : src/udpserv02.c.o
+src/udpservselect01.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERVSELECT01.dir/build.make CMakeFiles/UDPSERVSELECT01.dir/src/udpservselect01.c.o
+.PHONY : src/udpservselect01.c.o
 
-src/udpserv02.i: src/udpserv02.c.i
-.PHONY : src/udpserv02.i
+src/udpservselect01.i: src/udpservselect01.c.i
+.PHONY : src/udpservselect01.i
 
 # target to preprocess a source file
-src/udpserv02.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERV02.dir/build.make CMakeFiles/UDPSERV02.dir/src/udpserv02.c.i
-.PHONY : src/udpserv02.c.i
+src/udpservselect01.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERVSELECT01.dir/build.make CMakeFiles/UDPSERVSELECT01.dir/src/udpservselect01.c.i
+.PHONY : src/udpservselect01.c.i
 
-src/udpserv02.s: src/udpserv02.c.s
-.PHONY : src/udpserv02.s
+src/udpservselect01.s: src/udpservselect01.c.s
+.PHONY : src/udpservselect01.s
 
 # target to generate assembly for a file
-src/udpserv02.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERV02.dir/build.make CMakeFiles/UDPSERV02.dir/src/udpserv02.c.s
-.PHONY : src/udpserv02.c.s
+src/udpservselect01.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UDPSERVSELECT01.dir/build.make CMakeFiles/UDPSERVSELECT01.dir/src/udpservselect01.c.s
+.PHONY : src/udpservselect01.c.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... UDPSERV02"
-	@echo "... src/udpserv02.o"
-	@echo "... src/udpserv02.i"
-	@echo "... src/udpserv02.s"
+	@echo "... UDPSERVSELECT01"
+	@echo "... src/udpservselect01.o"
+	@echo "... src/udpservselect01.i"
+	@echo "... src/udpservselect01.s"
 .PHONY : help
 
 
