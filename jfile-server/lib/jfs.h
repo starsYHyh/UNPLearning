@@ -1,4 +1,5 @@
 #include "unp.h"
+#include "utils.h"
 
 void remove_newline(char *str, ssize_t n);
 

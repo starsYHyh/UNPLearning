@@ -1,17 +1,34 @@
 #include "jfs.h"
 
-void remove_newline(char *buf, ssize_t n) {
-    if (buf[n - 1] == '\n') {
-        buf[n - 1] = '\0';
+#ifndef PATH_MAX
+    #define PATH_MAX 256
+#endif
+
+/*
+    删除或添加结尾的\n
+*/
+void rmad_newline(char *buf, ssize_t *n, int flag) {
+    ssize_t len = strlen(buf);
+
+    if (!flag && buf[len - 1] == '\n') {
+        buf[len - 1] = '\0';
+        len--;
+    } else if (flag && buf[len - 1] != '\n') {
+        buf[len] = '\n';
+        len++;
     }
+    (*n) = len;
 }
 
+/*
+    客户端发送数据
+*/
 void jstr_cli(FILE *fp, int sockfd) {
     // 发送数组，接受数组
     char sendline[MAXLINE], recvline[MAXLINE];
 
     // 从文件指针中读取一行
-    while (Fgets(sendline, MAXLINE, fp) != NULL) {
+    while (write(STDOUT_FILENO, ">>> ", 4) && Fgets(sendline, MAXLINE, fp) != NULL) {
         // 将内容写入发送数组中
         Writen(sockfd, sendline, strlen(sendline));
 
@@ -21,14 +38,23 @@ void jstr_cli(FILE *fp, int sockfd) {
         if (Readline(sockfd, recvline, MAXLINE) == 0)
             err_quit("str_cli: server terminated prematurely");
         Fputs(recvline, stdout);
-        Readline(sockfd, recvline, MAXLINE);
-        Fputs(recvline, stdout);
     }
 }
 
 void request_handler(int sockfd, char *buf, ssize_t n) {
-    // remove_newline(buf, n);
-    Writen(sockfd, buf, n);
+    rmad_newline(buf, &n, 0);
+    writen(STDOUT_FILENO, buf, n);
+    char ans[MAXLINE];
+    int anslen = 0;
+    if (strcmp(buf, "pwd") == 0) {
+        mpwd(ans);
+    } else {
+        strcpy(ans, "Wrong request!\n");
+        anslen = strlen(ans);
+    }
+
+    rmad_newline(buf, &n, 1);
+    Writen(sockfd, ans, anslen);
 }
 
 void jstr_serv(int sockfd) {
@@ -37,7 +63,6 @@ void jstr_serv(int sockfd) {
 
 again:
     while ((n = read(sockfd, buf, MAXLINE)) > 0) {
-        
         request_handler(sockfd, buf, n);
     }
     
