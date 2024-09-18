@@ -47,7 +47,7 @@ void request_handler(int sockfd, char *buf, ssize_t n) {
     if (strcmp(buf, "pwd") == 0) {
         mpwd(ans);
     } else if (strcmp(buf, "cd") == 0) {
-        mcd("/home/ubuntu/Documents/C/UNPLearning/jfile-server/");
+        mcd(ans, "/home/firefly");
     }
 
     else {
