@@ -8,7 +8,7 @@
     删除或添加结尾的\n
 */
 void rmad_newline(char *buf, ssize_t *n, int flag) {
-    ssize_t len = strlen(buf);
+    ssize_t len = *n;
 
     if (!flag && buf[len - 1] == '\n') {
         buf[len - 1] = '\0';
@@ -42,18 +42,18 @@ void jstr_cli(FILE *fp, int sockfd) {
 }
 
 void request_handler(int sockfd, char *buf, ssize_t n) {
-    rmad_newline(buf, &n, 0);
+    // rmad_newline(buf, &n, 0);
     writen(STDOUT_FILENO, buf, n);
     char ans[MAXLINE];
-    int anslen = 0;
     if (strcmp(buf, "pwd") == 0) {
         mpwd(ans);
     } else {
         strcpy(ans, "Wrong request!\n");
-        anslen = strlen(ans);
     }
 
-    rmad_newline(buf, &n, 1);
+    int anslen = strlen(ans);
+    rmad_newline(ans, anslen, 1);
+    writen(STDOUT_FILENO, buf, n);
     Writen(sockfd, ans, anslen);
 }
 
