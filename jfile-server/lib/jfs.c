@@ -4,9 +4,7 @@
     #define PATH_MAX 256
 #endif
 
-/*
-    删除或添加结尾的\n
-*/
+
 void rmad_newline(char *buf, ssize_t *n, int flag) {
     ssize_t len = *n;
 
@@ -20,9 +18,7 @@ void rmad_newline(char *buf, ssize_t *n, int flag) {
     (*n) = len;
 }
 
-/*
-    客户端发送数据
-*/
+
 void jstr_cli(FILE *fp, int sockfd) {
     // 发送数组，接受数组
     char sendline[MAXLINE], recvline[MAXLINE];
@@ -31,7 +27,6 @@ void jstr_cli(FILE *fp, int sockfd) {
     while (write(STDOUT_FILENO, ">>> ", 4) && Fgets(sendline, MAXLINE, fp) != NULL) {
         // 将内容写入发送数组中
         Writen(sockfd, sendline, strlen(sendline));
-
 
         // Readline会读到换行符或EOF或超过指定字节数为止，如果服务器发送过来的数据没有换行符，则Fgets无法正常结束
         // 且只读一行，若server一次回答发送了多行，则只有第一行会读入，后续的行需要再次调用 Readline() 才能读取。
@@ -47,7 +42,10 @@ void request_handler(int sockfd, char *buf, ssize_t n) {
     if (strcmp(buf, "pwd") == 0) {
         mpwd(ans);
     } else if (strcmp(buf, "cd") == 0) {
-        mcd(ans, "/home/firefly");
+        char *path;
+        mcd(ans, path);
+    } else if (strcmp(buf, "ls") == 0) {
+        mls(ans, ".");
     }
 
     else {
