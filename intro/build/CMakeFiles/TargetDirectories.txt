@@ -1,3 +1,0 @@
-/home/firefly/Codes/C/UNP/intro/build/CMakeFiles/DAYTIMETCPSERV.dir
-/home/firefly/Codes/C/UNP/intro/build/CMakeFiles/edit_cache.dir
-/home/firefly/Codes/C/UNP/intro/build/CMakeFiles/rebuild_cache.dir

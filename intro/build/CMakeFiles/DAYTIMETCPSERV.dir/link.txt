@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/DAYTIMETCPSERV.dir/src/daytimetcpserv.c.o -o ../bin/DAYTIMETCPSERV  -lcrypt -lpthread ../../mylib/libunp.a 

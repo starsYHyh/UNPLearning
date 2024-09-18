@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/TCPCLI09.dir/lib/sigchldwait.c.o CMakeFiles/TCPCLI09.dir/src/tcpcli09.c.o -o ../bin/TCPCLI09  -lcrypt -lpthread ../../mylib/libunp.a 

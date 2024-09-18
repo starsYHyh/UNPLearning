@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/CHECKOPTS.dir/src/checkopts.c.o -o ../bin/CHECKOPTS  -lcrypt -lpthread ../../mylib/libunp.a 

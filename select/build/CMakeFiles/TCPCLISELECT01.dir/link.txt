@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/TCPCLISELECT01.dir/lib/strcliselect.c.o CMakeFiles/TCPCLISELECT01.dir/src/tcpcliselect01.c.o -o ../bin/TCPCLISELECT01  -lcrypt -lpthread ../../mylib/libunp.a 
