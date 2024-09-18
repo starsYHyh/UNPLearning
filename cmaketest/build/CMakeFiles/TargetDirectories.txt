@@ -1,3 +1,0 @@
-/home/firefly/Codes/C/UNP/cmaketest/build/CMakeFiles/TCPSERV01.dir
-/home/firefly/Codes/C/UNP/cmaketest/build/CMakeFiles/edit_cache.dir
-/home/firefly/Codes/C/UNP/cmaketest/build/CMakeFiles/rebuild_cache.dir
