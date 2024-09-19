@@ -1,5 +1,13 @@
 #include "unp.h"
 #include "utils.h"
+#include <malloc.h>
+
+struct arg
+{
+    char **argv;
+    int argc;
+};
+
 
 /*
     删除或添加结尾的\n
@@ -9,7 +17,7 @@ void remove_newline(char *str, ssize_t n);
 /*
     参数处理
 */
-char **args_trim(char *request);
+struct arg *argv_trim(char *request, ssize_t n);
 
 /*
     客户端发送数据

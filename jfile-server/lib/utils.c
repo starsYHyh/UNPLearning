@@ -17,6 +17,9 @@ void mcd(char *ans, const char *path) {
 void mls(char *ans, const char *path) {
     DIR *dirp;
     struct dirent *dp;
+    char *info = "in ";
+    Writen(STDOUT_FILENO, info, 4);
+    // 下面有bug
     if (path == NULL)
         dirp = opendir(".");
     else 

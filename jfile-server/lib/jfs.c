@@ -18,6 +18,34 @@ void rmad_newline(char *buf, ssize_t *n, int flag) {
     (*n) = len;
 }
 
+struct arg *argv_trim(char *request, ssize_t n) {
+    char **argv = malloc(sizeof(char *) * n);
+    ssize_t a = 0;
+    ssize_t b = 0;
+    int argc = 0;
+    for (;;) {
+        while (request[b] == ' ' && request[b] != '\n') {
+            a++;
+            b++;
+        }
+        if (request[b] == '\n')
+            break;
+        while (request[b] != ' ' && request[b] != '\n') {
+            b++;
+        }
+        argv[argc] = malloc(sizeof(char) * (b - a));
+        bzero(argv[argc], b - a);
+        memcpy(argv[argc], request + a, b - a);
+        a = b;
+        argc++;
+    }
+    struct arg *arg = malloc(sizeof(struct arg));
+    arg->argc = argc;
+    arg->argv = argv;
+    arg->argv = realloc(argv, sizeof(char *) * argc);
+    return arg;
+}
+
 
 void jstr_cli(FILE *fp, int sockfd) {
     // 发送数组，接受数组
@@ -37,15 +65,19 @@ void jstr_cli(FILE *fp, int sockfd) {
 }
 
 void request_handler(int sockfd, char *buf, ssize_t n) {
-    rmad_newline(buf, &n, 0);
+    struct arg *arg = argv_trim(buf, n);
+    char **argv = arg->argv;
+    int argc = arg->argc;
     char ans[MAXLINE];
-    if (strcmp(buf, "pwd") == 0) {
+
+    
+    if (strcmp(argv[0], "pwd") == 0) {
         mpwd(ans);
-    } else if (strcmp(buf, "cd") == 0) {
-        char *path;
-        mcd(ans, path);
-    } else if (strcmp(buf, "ls") == 0) {
-        mls(ans, ".");
+    } else if (strcmp(argv[0], "cd") == 0) {
+        // char *path;
+        mcd(ans, argv[1]);
+    } else if (strcmp(argv[0], "ls") == 0) {
+        mls(ans, argv[1]);
     }
 
     else {
