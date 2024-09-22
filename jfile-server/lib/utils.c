@@ -1,5 +1,4 @@
 #include "utils.h"
-#include "jfs.h"
 #include <linux/limits.h>
 
 void mpwd(char *ans) {
@@ -18,21 +17,10 @@ void mcd(char *ans, const char *path) {
 void mls(char *ans, struct arguments *arg) {
     DIR *dirp;
     struct dirent *dp;
-    int count = arg->argc;
-
-    if (count == 1) {
-        dirp = opendir(".");
-    } else {
-        dirp = 
-    }
-
-    // 下面有bug
-    if (path == NULL)
-        dirp = opendir(".");
-    else 
-        dirp = opendir(path);
-    if (dirp == NULL) 
-        err_quit("opendir failed");
+    char *path = arg->argc == 1 ? "." : arg->argv[1];
+    dirp = opendir(path);
+    if ((dirp = opendir(path)) == NULL)
+        snprintf(ans, MAXLINE, "%s is not a directory", path);
     
     for (;;) {
         errno = 0;

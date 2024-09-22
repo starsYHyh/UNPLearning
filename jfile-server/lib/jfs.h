@@ -1,13 +1,5 @@
-#include "unp.h"
 #include "utils.h"
 #include <malloc.h>
-
-struct arguments
-{
-    char **argv;
-    int argc;
-};
-
 
 /*
     删除或添加结尾的\n
