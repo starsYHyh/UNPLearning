@@ -2,7 +2,7 @@
 #include "utils.h"
 #include <malloc.h>
 
-struct arg
+struct arguments
 {
     char **argv;
     int argc;
@@ -17,7 +17,7 @@ void remove_newline(char *str, ssize_t n);
 /*
     参数处理
 */
-struct arg *argv_trim(char *request, ssize_t n);
+struct arguments *argv_trim(char *request, ssize_t n);
 
 /*
     客户端发送数据

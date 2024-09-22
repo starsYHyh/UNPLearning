@@ -18,7 +18,7 @@ void rmad_newline(char *buf, ssize_t *n, int flag) {
     (*n) = len;
 }
 
-struct arg *argv_trim(char *request, ssize_t n) {
+struct arguments *argv_trim(char *request, ssize_t n) {
     char **argv = malloc(sizeof(char *) * n);
     ssize_t a = 0;
     ssize_t b = 0;
@@ -39,7 +39,7 @@ struct arg *argv_trim(char *request, ssize_t n) {
         a = b;
         argc++;
     }
-    struct arg *arg = malloc(sizeof(struct arg));
+    struct arguments *arg = malloc(sizeof(struct arguments));
     arg->argc = argc;
     arg->argv = argv;
     arg->argv = realloc(argv, sizeof(char *) * argc);
@@ -65,10 +65,10 @@ void jstr_cli(FILE *fp, int sockfd) {
 }
 
 void request_handler(int sockfd, char *buf, ssize_t n) {
-    struct arg *arg = argv_trim(buf, n);
+    struct arguments *arg = argv_trim(buf, n);
     char **argv = arg->argv;
     int argc = arg->argc;
-    char ans[MAXLINE];
+    char ans[MAXLINE] = {0};
 
     
     if (strcmp(argv[0], "pwd") == 0) {
@@ -77,7 +77,7 @@ void request_handler(int sockfd, char *buf, ssize_t n) {
         // char *path;
         mcd(ans, argv[1]);
     } else if (strcmp(argv[0], "ls") == 0) {
-        mls(ans, argv[1]);
+        mls(ans, arg);
     }
 
     else {

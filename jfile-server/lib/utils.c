@@ -1,4 +1,5 @@
 #include "utils.h"
+#include "jfs.h"
 #include <linux/limits.h>
 
 void mpwd(char *ans) {
@@ -14,11 +15,17 @@ void mcd(char *ans, const char *path) {
     snprintf(ans, MAXLINE, "changed dir to %s", path);
 }
 
-void mls(char *ans, const char *path) {
+void mls(char *ans, struct arguments *arg) {
     DIR *dirp;
     struct dirent *dp;
-    char *info = "in ";
-    Writen(STDOUT_FILENO, info, 4);
+    int count = arg->argc;
+
+    if (count == 1) {
+        dirp = opendir(".");
+    } else {
+        dirp = 
+    }
+
     // 下面有bug
     if (path == NULL)
         dirp = opendir(".");

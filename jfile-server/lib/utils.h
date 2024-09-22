@@ -10,4 +10,4 @@ void mpwd(char *ans);
 void mcd(char *ans, const char *path);
 
 /* 展示指定目录下的文件 */
-void mls(char *ans, const char *path);
+void mls(char *ans, struct arguments *arg);
