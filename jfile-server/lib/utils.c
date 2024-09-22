@@ -1,5 +1,4 @@
 #include "utils.h"
-#include <linux/limits.h>
 
 void mpwd(char *ans) {
     if (getcwd(ans, PATH_MAX) == NULL) 
@@ -36,5 +35,4 @@ void mls(char *ans, struct arguments *arg) {
         err_quit("readdir");
     if (closedir(dirp) == -1)
         err_quit("closedir");
-    
 }

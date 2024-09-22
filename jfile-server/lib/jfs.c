@@ -46,7 +46,6 @@ struct arguments *argv_trim(char *request, ssize_t n) {
     return arg;
 }
 
-
 void jstr_cli(FILE *fp, int sockfd) {
     // 发送数组，接受数组
     char sendline[MAXLINE], recvline[MAXLINE];
@@ -74,7 +73,6 @@ void request_handler(int sockfd, char *buf, ssize_t n) {
     if (strcmp(argv[0], "pwd") == 0) {
         mpwd(ans);
     } else if (strcmp(argv[0], "cd") == 0) {
-        // char *path;
         mcd(ans, argv[1]);
     } else if (strcmp(argv[0], "ls") == 0) {
         mls(ans, arg);

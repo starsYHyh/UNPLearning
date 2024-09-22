@@ -3,7 +3,7 @@
 #include "ds.h"
 
 
-/* 返回当前所在目录 */
+/* 打印当前所在目录 */
 void mpwd(char *ans);
 
 /* 打开某一目录 */
